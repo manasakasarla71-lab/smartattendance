@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Smart Attendance</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Smart Attendance</h1>
+  <p>Student Attendance Management</p>
+</header>
+
+<main>
+  <section class="card">
+    <h2>Add Student</h2>
+    <input id="name" placeholder="Student Name">
+    <input id="id" placeholder="Student ID">
+    <button onclick="addStudent()">Add</button>
+  </section>
+
+  <section class="card">
+    <input id="search" placeholder="Search student..." oninput="display()">
+    <input type="date" id="date" onchange="display()">
+  </section>
+
+  <section class="card">
+    <h2>Attendance</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Attendance</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="list"></tbody>
+    </table>
+  </section>
+
+  <div class="stats">
+    <div>Total: <b id="total">0</b></div>
+    <div>Present: <b id="present">0</b></div>
+    <div>Absent: <b id="absent">0</b></div>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
